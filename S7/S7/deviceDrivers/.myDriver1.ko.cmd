@@ -1,0 +1,1 @@
+cmd_/home/victor/UNI/SO/S7/S7/deviceDrivers/myDriver1.ko := ld -r -m elf_x86_64 --build-id=sha1  -T scripts/module.lds -o /home/victor/UNI/SO/S7/S7/deviceDrivers/myDriver1.ko /home/victor/UNI/SO/S7/S7/deviceDrivers/myDriver1.o /home/victor/UNI/SO/S7/S7/deviceDrivers/myDriver1.mod.o;  true

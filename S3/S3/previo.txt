@@ -1,0 +1,118 @@
+ejemplo_fork1:
+    Muestra los numeros 7819 y 7820. Estas son las id's
+    de los procesos que el SO le asigna a padre a hijo
+
+ejemplo_fork2:
+    Antes del fork: Soy el proceso 8383
+    PADRE: Soy el proceso 8383
+    Los DOS: Soy el proceso 8383
+    HIJO: Soy el proceso 8384
+    Los DOS: Soy el proceso 8384
+
+    Primero nos da la id del padre. Después se ejecuta el
+    switch. En mi caso lo ejecuta primero el padre, por lo que 
+    saldrá la id del padre dos veces. Por ultimo, sale la id
+    del hijo dos veces.
+
+ejemplo_fork3:
+    Antes del fork: Soy el proceso 8744
+    PADRE: Soy el proceso 8744
+    Solo lo ejecuta el padre: Soy el proceso 8744
+    HIJO: Soy el proceso 8745
+
+    Es lo mismo que en el 2, solo que ejecutamos el proceso
+    hijo en el switch, haciendo que no ejecute lo que hay 
+    fuera
+
+ejemplo_fork4:
+    Antes del fork: Soy el proceso 9592
+    PADRE: Soy el proceso 9592
+    Solo lo ejecuta el padre: Soy el proceso 9592
+    HIJO: Soy el proceso 9593
+    HIJO acaba: Soy el proceso 9593
+
+    Primero aparece el del padre, y luego el del hijo.
+
+    Antes del fork: Soy el proceso 10016
+    PADRE: Soy el proceso 10016
+    HIJO: Soy el proceso 10017
+    HIJO acaba: Soy el proceso 10017
+    Solo lo ejecuta el padre: Soy el proceso 10016
+
+ejemplo_fork5:
+    Antes del fork: Soy el proceso 10035
+    PADRE: Soy el proceso 10035
+    HIJO: Soy el proceso 10036
+    HIJO:La variable_global vale A y la local a
+    PADRE:La variable_global vale A y la local a
+    Solo lo ejecuta el padre: Soy el proceso 10035
+
+    Primero aparece el mensaje del padre antes que el fork,
+    despues los dos casos del case, y por ultimo, aparece el 
+    mensaje del padre.
+
+    Antes del fork: Soy el proceso 10860
+    PADRE: Soy el proceso 10860
+    HIJO: Soy el proceso 10861
+    HIJO:La variable_global vale B y la local b
+    PADRE:La variable_global vale A y la local a
+    Solo lo ejecuta el padre: Soy el proceso 10860
+
+ejemplo_fork6:
+    No se encontrará nunca la misma salida, porque su id 
+    del principio cambiará.
+
+ejemplo_fork7:
+    No compila porque "variable_local" no esta definida en
+    la función. Para solucionar este problema, se pasa como
+    parámetro de la funcion un entero "variable_local".
+
+    Antes del fork: Soy el proceso 12071
+    PADRE: Soy el proceso 12071
+    Funcion:La variable_global vale A y la local a
+    Solo lo ejecuta el padre: Soy el proceso 12071
+    HIJO: Soy el proceso 12072
+    Funcion:La variable_global vale A y la local a
+
+ejemplo_exec1:
+    Soy el proceso: 12113
+    total 12516
+    -rwxrwxr-x 1 victor victor   16184 sep 29 17:48 ejemplo_exec1
+    -rw-r--r-- 1 victor victor     327 feb  8  2021 ejemplo_exec1.c
+    -rwxrwxr-x 1 victor victor   16184 sep 29 17:48 ejemplo_exec2
+    -rw-r--r-- 1 victor victor     332 feb  8  2021 ejemplo_exec2.c
+    -rwxrwxr-x 1 victor victor   16184 sep 29 17:48 ejemplo_fork1
+    -rw-r--r-- 1 victor victor     315 feb  8  2021 ejemplo_fork1.c
+    -rwxrwxr-x 1 victor victor   16184 sep 29 17:48 ejemplo_fork2
+    -rw-r--r-- 1 victor victor    1065 feb  8  2021 ejemplo_fork2.c
+    -rwxrwxr-x 1 victor victor   16224 sep 29 17:48 ejemplo_fork3
+    -rw-r--r-- 1 victor victor    1147 feb  8  2021 ejemplo_fork3.c
+    -rwxrwxr-x 1 victor victor   16272 sep 29 19:26 ejemplo_fork4
+    -rw-r--r-- 1 victor victor    1428 sep 29 19:26 ejemplo_fork4.c
+    -rwxrwxr-x 1 victor victor   16312 sep 29 20:01 ejemplo_fork5
+    -rw-r--r-- 1 victor victor    1728 sep 29 20:01 ejemplo_fork5.c
+    -rwxrwxr-x 1 victor victor   16296 sep 29 17:48 ejemplo_fork6
+    -rw-r--r-- 1 victor victor    2051 feb  8  2021 ejemplo_fork6.c
+    -rwxrwxr-x 1 victor victor   16304 sep 29 21:02 ejemplo_fork7
+    -rw-r--r-- 1 victor victor    1595 sep 29 21:02 ejemplo_fork7.c
+    -rwxr-xr-x 1 victor victor    8581 feb  8  2021 listaParametros
+    -rw-r--r-- 1 victor victor     891 sep 29 21:00 Makefile.ejemplos
+    -rw-rw-r-- 1 victor victor 6300139 sep 29 20:55 output1.txt
+    -rw-rw-r-- 1 victor victor 6300139 sep 29 20:55 output2.txt
+    -rw-rw-r-- 1 victor victor    2059 sep 29 21:00 previo.txt
+    -rw-r--r-- 1 victor victor     615 sep 29 18:29 README_S3
+
+    Lo primero que se ve es la id de un proceso, despues veo
+    lo que seria un ls -l. Solo se ve una vez.
+
+ejemplo_exec2:
+    Soy el proceso: 12230
+    Soy el proceso 12230
+    Soy el proceso 12231
+
+    Lo primero que pone es el proceso donde se ha ejecutado 
+    el exec y donde se ha ejecutado el programa ejemplo_fork1.
+    Es ahí donde se crea también el segundo proceso, el hijo.
+
+Todas las páginas del manual que he consultado se situan en la
+2 (system calls).

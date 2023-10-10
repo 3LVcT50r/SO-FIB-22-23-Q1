@@ -1,0 +1,6 @@
+18. Porque es lo que devuelve el fork().
+19. Ese código se ejecutará cuando el execpl falle.
+20. He utilizado el comando ls -l
+21. 111432
+22. Estos son ficheros apuntan al programa myPS, pero estan zombie
+23. Se encuentran en estado zombie.

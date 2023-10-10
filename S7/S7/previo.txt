@@ -1,0 +1,11 @@
+1. Retorna 0
+2. ./esc1 <prueba.txt (prueba.txt es el archivo que he utilizado)
+    Escribe exactamente lo que tenia en la prueba.
+    
+    Te hace el ls -l con los archivos que contengan un es
+3. ps -eo pid,user,command | grep bash
+4. Hecho
+5. Se escibe en el primer caso 4 bytes y en el segundo caso 5. La diferencia es que el primer valor no se puede interpretar y el segundo valor es el numero que queriamos.
+6. 
+    mD1 a) read_driver_1 b)
+    mD2 a) read_driver_2 b)

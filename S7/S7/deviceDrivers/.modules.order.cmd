@@ -1,0 +1,1 @@
+cmd_/home/victor/UNI/SO/S7/S7/deviceDrivers/modules.order := {   echo /home/victor/UNI/SO/S7/S7/deviceDrivers/myDriver1.ko;   echo /home/victor/UNI/SO/S7/S7/deviceDrivers/myDriver2.ko; :; } | awk '!x[$$0]++' - > /home/victor/UNI/SO/S7/S7/deviceDrivers/modules.order

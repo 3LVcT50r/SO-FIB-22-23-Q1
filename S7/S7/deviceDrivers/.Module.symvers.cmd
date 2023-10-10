@@ -1,0 +1,1 @@
+cmd_/home/victor/UNI/SO/S7/S7/deviceDrivers/Module.symvers := sed 's/\.ko$$/\.o/' /home/victor/UNI/SO/S7/S7/deviceDrivers/modules.order | scripts/mod/modpost -m -a  -o /home/victor/UNI/SO/S7/S7/deviceDrivers/Module.symvers -e -i Module.symvers   -T -

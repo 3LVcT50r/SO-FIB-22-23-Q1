@@ -1,0 +1,16 @@
+ALARM 1 --------------
+1. Sale un mensaje Alarm clock, y el proceso muere.
+2. No. El mensaje es Killed
+3. La consola usa el waitpid que muestra el status cuando acaba el proceso
+4. Se ejecutaria si el alarm no terminara el proceso
+
+ALARM 2 --------------
+1. Aumenta 10 segundos de golpe
+2. No
+3. Si es 0 no hay ningun problema. Si se ha cancelado, retorna el tiempo que faltaria para la alarma inicial
+
+ALARM 3 ---------------
+1. Los dos. Aparece por duplicado con pids diferentes
+
+ALARM 4 ---------------
+1. Ninguno para el proceso del padre y 10 para el hijo

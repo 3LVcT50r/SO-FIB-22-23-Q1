@@ -1,0 +1,14 @@
+1. Se encuentra en el proc/pid/vm
+2. He utilizado el vmstat -t /seg/. Se encuentra en la columna 10
+3. Leido
+4. Leido
+5. Funciona
+6. 
+    10 -> 0.002s
+    20 -> 0.002s
+    30 -> 0.019s
+    40 -> 1.207s
+    50 -> MUCHO TIEMPO
+
+7. 12.28
+8. Leido
